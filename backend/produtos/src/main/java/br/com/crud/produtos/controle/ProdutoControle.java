@@ -16,7 +16,7 @@ import br.com.crud.produtos.modelo.RespostaModelo;
 import br.com.crud.produtos.servico.ProdutoServico;
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 public class ProdutoControle {
   // Injeção de dependências
 
@@ -35,9 +35,7 @@ public class ProdutoControle {
   }
 
   @PutMapping("/alterar")
-
   public ResponseEntity<?> alterar(@RequestBody ProdutoModelo pm) {
-
     return ps.cadastrarAlterar(pm, "alterar");
 
   }
@@ -53,7 +51,6 @@ public class ProdutoControle {
   @GetMapping("/")
 
   public String rota() {
-
     return "A API está funcionando!";
 
   }
